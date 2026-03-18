@@ -45,6 +45,12 @@ window#waybar {
     min-width: 0;
 }
 
+#workspaces button:active {
+    background: #2e3440;
+    color: #d8dee9;
+    box-shadow: none;
+}
+
 #workspaces button.active {
     background: #5e81ac;
     color: #eceff4;
@@ -55,10 +61,7 @@ window#waybar {
     color: #eceff4;
 }
 
-#workspaces button:hover {
-    background: #3b4252;
-    color: #eceff4;
-}
+
 
 
 

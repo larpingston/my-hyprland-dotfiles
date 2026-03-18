@@ -1,0 +1,65 @@
+{
+    "position": "top",
+    "layer": "top",
+    "height": 26,
+    "margin-top": 0,
+    "margin-left": 0,
+    "margin-right": 0,
+    "margin-bottom": 0,
+    "spacing": 0,
+
+    "modules-left": ["custom/terminal", "hyprland/workspaces", "cpu", "memory"],
+    "modules-center": ["clock"],
+    "modules-right": ["tray", "pulseaudio", "custom/power", "custom/swaync"],
+
+    "hyprland/workspaces": {
+        "format": "{id}",
+        "on-click": "activate",
+        "sort-by-id": true,
+        "all-outputs": false,
+        "show-special": false
+    },
+
+    "clock": {
+        "format": "{:%H:%M}",
+        "format-alt": "{:%A, %d %B %Y}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+
+    "pulseaudio": {
+        "format": "{volume}% {icon}",
+        "format-muted": "muted 󰝟",
+        "format-icons": {
+            "default": ["󰕿", "󰖀", "󰕾"]
+        },
+        "on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+        "on-scroll-up": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%+",
+        "on-scroll-down": "wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-",
+        "on-click-right": "pavucontrol",
+        "tooltip": false
+    },
+
+    "cpu": {
+        "format": "{usage}% 󰍛",
+        "interval": 2,
+        "tooltip": false
+    },
+
+    "memory": {
+        "format": "{used:0.1f}G 󰑭",
+        "interval": 2,
+        "tooltip": false
+    },
+
+    "custom/power": {
+        "format": "⏻",
+        "on-click": "hyprlock",
+        "tooltip": false
+    },
+
+    "tray": {
+        "icon-size": 14,
+        "spacing": 6,
+        "show-passive-items": true
+    }
+}

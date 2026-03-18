@@ -1,0 +1,8 @@
+@define-color wb_bg #2e3440;
+@define-color wb_fg #d8dee9;
+@define-color wb_accent #5e81ac;
+@define-color wb_hover #3b4252;
+@define-color wb_active_fg #eceff4;
+@define-color wb_tooltip_border #4c566a;
+@define-color wb_warn #ebcb8b;
+@define-color wb_crit #bf616a;

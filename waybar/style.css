@@ -1,0 +1,72 @@
+@import "colors.css";
+
+* {
+    border: none;
+    border-radius: 0;
+    font-family: monospace;
+    font-size: 10px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: @wb_bg;
+    color: @wb_fg;
+}
+
+/* all modules reset */
+#workspaces,
+#clock,
+#cpu,
+#memory,
+#pulseaudio,
+#tray,
+#custom-power,
+#custom-swaync,
+#custom-terminal {
+    background: @wb_bg;
+    color: @wb_fg;
+    padding: 0 8px;
+    margin: 0;
+    border-radius: 0;
+}
+
+/* workspaces */
+#workspaces {
+    padding: 0;
+}
+
+#workspaces button {
+    background: @wb_bg;
+    color: @wb_fg;
+    padding: 0 6px;
+    border-radius: 0;
+    font-family: monospace;
+    font-size: 10px;
+    min-width: 0;
+}
+
+#workspaces button.active {
+    background: @wb_accent;
+    color: @wb_active_fg;
+}
+
+#workspaces button.urgent {
+    background: @wb_accent;
+    color: @wb_active_fg;
+}
+
+#workspaces button:hover {
+    background: @wb_hover;
+    color: @wb_active_fg;
+}
+
+#cpu.warning, #memory.warning { color: @wb_warn; }
+#cpu.critical, #memory.critical { color: @wb_crit; }
+
+tooltip {
+    background: @wb_bg;
+    border: 1px solid @wb_tooltip_border;
+    color: @wb_fg;
+    font-family: monospace;
+    font-size: 10px;
+}

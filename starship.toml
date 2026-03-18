@@ -1,0 +1,74 @@
+# ============================================================
+#  Starship — powerline · Ghibli Earthy palette
+# ============================================================
+
+palette = "ghibli"
+
+format = """
+[ $username ](bold fg:text bg:surface)[](fg:surface bg:overlay)[ $directory ](bold fg:text bg:overlay)$git_branch$git_status[](fg:overlay bg:water)[ ⊙ $time ](bold fg:bg bg:water)[](fg:water) $character"""
+
+[palettes.ghibli]
+bg      = "#2f313a"
+surface = "#2f313a"
+overlay = "#383c42"
+dim     = "#42464d"
+muted   = "#7a96a0"
+text    = "#c8cab8"
+soft    = "#a8aa98"
+sage    = "#8a9e7a"
+water   = "#7a96a0"
+warm    = "#b09878"
+terra   = "#c87a60"
+
+[username]
+format = "$user"
+style_user = "bold fg:text bg:surface"
+style_root = "bold fg:terra bg:surface"
+show_always = true
+
+[directory]
+format = "$path"
+style = "bold fg:text bg:overlay"
+truncation_length = 3
+truncate_to_repo = true
+
+[git_branch]
+format = "[](fg:overlay bg:dim)[ $symbol$branch ](bold fg:soft bg:dim)"
+symbol = " "
+style = "bold fg:soft bg:dim"
+
+[git_status]
+format = "[$all_status$ahead_behind](fg:warm bg:dim)"
+style = "fg:warm bg:dim"
+conflicted = "!"
+ahead = "⇡${count}"
+behind = "⇣${count}"
+diverged = "⇕"
+untracked = "?"
+modified = "~"
+staged = "+"
+deleted = "-"
+
+[cmd_duration]
+format = "[](fg:water bg:muted)[ $duration ](fg:text bg:muted)[](fg:muted) "
+style = "fg:text bg:muted"
+min_time = 500
+
+[time]
+disabled = false
+format = "$time"
+style = "bold fg:bg bg:water"
+time_format = "%H:%M"
+
+[character]
+success_symbol = "[❯](bold fg:sage)"
+error_symbol = "[❯](bold fg:terra)"
+
+[package]
+disabled = true
+[nodejs]
+disabled = true
+[python]
+disabled = true
+[rust]
+disabled = true

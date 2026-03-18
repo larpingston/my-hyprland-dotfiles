@@ -1,4 +1,4 @@
-@import "colors.css";
+/* Nordic theme — colors from colors.conf */
 
 * {
     border: none;
@@ -9,8 +9,8 @@
 }
 
 window#waybar {
-    background: @wb_bg;
-    color: @wb_fg;
+    background: #2e3440;
+    color: #d8dee9;
 }
 
 /* all modules reset */
@@ -23,8 +23,8 @@ window#waybar {
 #custom-power,
 #custom-swaync,
 #custom-terminal {
-    background: @wb_bg;
-    color: @wb_fg;
+    background: #2e3440;
+    color: #d8dee9;
     padding: 0 8px;
     margin: 0;
     border-radius: 0;
@@ -36,8 +36,8 @@ window#waybar {
 }
 
 #workspaces button {
-    background: @wb_bg;
-    color: @wb_fg;
+    background: #2e3440;
+    color: #d8dee9;
     padding: 0 6px;
     border-radius: 0;
     font-family: monospace;
@@ -46,27 +46,26 @@ window#waybar {
 }
 
 #workspaces button.active {
-    background: @wb_accent;
-    color: @wb_active_fg;
+    background: #5e81ac;
+    color: #eceff4;
 }
 
 #workspaces button.urgent {
-    background: @wb_accent;
-    color: @wb_active_fg;
+    background: #5e81ac;
+    color: #eceff4;
 }
 
 #workspaces button:hover {
-    background: @wb_hover;
-    color: @wb_active_fg;
+    background: #3b4252;
+    color: #eceff4;
 }
 
-#cpu.warning, #memory.warning { color: @wb_warn; }
-#cpu.critical, #memory.critical { color: @wb_crit; }
+
 
 tooltip {
-    background: @wb_bg;
-    border: 1px solid @wb_tooltip_border;
-    color: @wb_fg;
+    background: #2e3440;
+    border: 1px solid #4c566a;
+    color: #d8dee9;
     font-family: monospace;
     font-size: 10px;
 }

@@ -1,16 +1,21 @@
 /**
  * clean.rasi — dwm-style
+ * Colors from colors.conf
  */
 
-@import "~/.config/rofi/colors.rasi"
-
 * {
+    bg:          #2e3440;
+    fg:          #d8dee9;
+    fg-dim:      #3b4252;
+    border-col:  #5e81ac;
+    selected-fg: #eceff4;
+
     background-color: transparent;
     text-color:       @fg;
 }
 
 window {
-    background-color: #222222;
+    background-color: @bg;
     border:           2px solid;
     border-color:     @border-col;
     border-radius:    0px;
@@ -86,12 +91,12 @@ element selected.normal {
 
 element normal.urgent,
 element alternate.urgent {
-    text-color: #c87a60;
+    text-color: #bf616a;
 }
 
 element selected.urgent {
     background-color: transparent;
-    text-color:       #c87a60;
+    text-color:       #bf616a;
 }
 
 element-icon {
@@ -108,7 +113,7 @@ element-text {
 }
 
 message {
-    background-color: #222222;
+    background-color: @bg;
     border-radius:    0px;
     padding:          4px 8px;
     border:           1px solid;

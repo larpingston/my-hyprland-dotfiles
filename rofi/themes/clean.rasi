@@ -4,11 +4,11 @@
  */
 
 * {
-    bg:          #2e3440;
-    fg:          #d8dee9;
-    fg-dim:      #3b4252;
-    border-col:  #5e81ac;
-    selected-fg: #eceff4;
+    bg:          #171717;
+    fg:          #8c8c8c;
+    fg-dim:      #1d1a1e;
+    border-col:  #b16987;
+    selected-fg: #f2ecf4;
 
     background-color: transparent;
     text-color:       @fg;
